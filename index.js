@@ -1,19 +1,14 @@
+const categoryList = document.querySelector("#categoryList");
 const endpoint = "https://kea-alt-del.dk/t7/api/categories";
 
-const catListeContainer = document.querySelector("#catListeContainer");
-
 fetch(endpoint)
-  .then((res) => res.json())
-  .then(visData);
-
-function visData(json) {
-  console.table(json);
-
-  json.forEach((element) => {
-    catListeContainer.innerHTML += `
-      <a href="productlist.html?cat=${element.category}">
-        ${element.category}
-      </a>
-    `;
+  .then((response) => response.json())
+  .then((data) => {
+    data.forEach((category) => {
+      categoryList.innerHTML += `
+        <a class="category-card" href="productlist.html?cat=${category.category}">
+          ${category.category}
+        </a>
+      `;
+    });
   });
-}

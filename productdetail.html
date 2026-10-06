@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Produktliste</title>
+    <title>Produktdetalje</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -12,7 +12,6 @@
     <header class="site-header">
         <div class="container nav">
             <a class="logo" href="index.html">Min tøjbutik</a>
-
             <nav>
                 <a href="index.html">Forside</a>
                 <a href="productlist.html">Produkter</a>
@@ -21,19 +20,9 @@
     </header>
 
     <main class="container page-content">
+        <a class="back-link" href="productlist.html">← Tilbage til produkter</a>
 
-        <div class="page-top">
-
-            <a class="back-link" href="index.html">← Tilbage</a>
-
-            <p class="small-text">Shop</p>
-
-            <h1 id="categoryTitle">Produktliste</h1>
-
-        </div>
-
-        <section id="productlist" class="product-grid"></section>
-
+        <section id="productDetail" class="detail-card"></section>
     </main>
 
     <footer class="site-footer">
@@ -42,8 +31,7 @@
         </div>
     </footer>
 
-    <script src="productlist.js"></script>
-
+    <script src="productdetail.js"></script>
 </body>
 
 </html>
